@@ -6,7 +6,6 @@ Vue.use(Router)
 var routes =[
   { path: '/', redirect: '/before' },
   { path: '/login', component: () => import('../components/log/login.vue') },
-  { path: '/test', component: () => import('../components/test.vue') },
   { path: '/register', component: () => import('../components/log/register.vue'), meta:{Auth: true}},
   { path: '*', component: () => import('../components/notFound.vue')},
 
@@ -31,7 +30,8 @@ var routes =[
       {path:'systemNews',component:()=> import('@/news/newsComponents/systemNews.vue')},
       {path:'receiveAgrees',component:()=> import('@/news/newsComponents/receiveAgree.vue')},
       {path:'replay',component:()=> import('@/news/newsComponents/replay.vue')},
-    ]  {
+    ]},
+  {
     path:'/back',
     redirect: '/back/welcome',
 
@@ -46,13 +46,12 @@ var routes =[
       {path:'backNews',component:()=> import('@/back/backComponents/backNews.vue')},
     ]
   },
-  },
 
   //后台路由重定向
 
 
 
-  //前台路由重定向
+  //前台路由重定向s
   {
     path:'/before',
     redirect: '/before/beforeWelcome',
